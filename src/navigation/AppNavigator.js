@@ -3,7 +3,6 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import LandingScreen from '../screens/LandingScreen';
-import Colors from '../styles/colors';
 import styles from '../styles/styles';
 
 const Stack = createNativeStackNavigator();
@@ -13,8 +12,7 @@ const AppNavigator = () => {
     <NavigationContainer>
       <ImageBackground
         style={styles.container}
-        source={require('../assets/purple-glow-ellipse.png')}
-        imageStyle={{position: 'absolute'}}>
+        source={require('../assets/purple-glow-ellipse.png')}>
         <Stack.Navigator
           screenOptions={{
             header: () => null,
