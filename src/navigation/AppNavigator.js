@@ -3,6 +3,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import LandingScreen from '../screens/LandingScreen';
+import SignUpScreen from '../screens/SignUpScreen';
 import styles from '../styles/styles';
 
 const Stack = createNativeStackNavigator();
@@ -19,6 +20,7 @@ const AppNavigator = () => {
             contentStyle: {backgroundColor: 'transparent'},
           }}>
           <Stack.Screen name="LandingScreen" component={LandingScreen} />
+          <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
         </Stack.Navigator>
       </ImageBackground>
     </NavigationContainer>

@@ -36,6 +36,13 @@ const styles = StyleSheet.create({
     letterSpacing: 0.6,
     textDecorationLine: 'underline',
   },
+  font32: {
+    color: Colors.primary,
+    fontSize: 32,
+    lineHeight: 38,
+    fontWeight: '500',
+    letterSpacing: 0.64,
+  },
   font16: {
     color: Colors.primary,
     fontSize: 16,
@@ -49,6 +56,13 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     fontWeight: '400',
     letterSpacing: 0.64,
+  },
+  backBtn: {
+    position: 'absolute',
+    top: 20,
+    left: 15,
+    padding: 5,
+    zIndex: 1000,
   },
 });
 

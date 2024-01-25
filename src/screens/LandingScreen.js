@@ -1,9 +1,9 @@
 import {View, Text, Image, StyleSheet} from 'react-native';
 import React from 'react';
-import {Button, LinkText} from '../components';
+import {Button, LinkText, GradientText} from '../components';
 import commonStyles from '../styles/styles';
 
-const LandingScreen = () => {
+const LandingScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
@@ -18,11 +18,13 @@ const LandingScreen = () => {
           style={styles.triaTextImage}
           source={require('../assets/tria-text.png')}
         />
-        <Text style={styles.tagline}>{`One name,\nall things Web3`}</Text>
+        <GradientText
+          colors={['rgba(250, 250, 250, 0.90)', 'rgba(250, 250, 250, 0.40)']}
+          style={styles.tagline}>{`One name,\nall things Web3`}</GradientText>
         <Button
           style={styles.getStartedBtn}
           title="Get started"
-          onPress={() => {}}
+          onPress={() => navigation.navigate('SignUpScreen')}
         />
         <LinkText title="Continue as Guest" onPress={() => {}} />
       </View>
