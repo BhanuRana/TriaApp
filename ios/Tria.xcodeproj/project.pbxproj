@@ -14,6 +14,14 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-Tria-TriaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Tria-TriaTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		BBBC74D760CF4F0F845248F2 /* NeueHaasDisplayBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72377F3D81D9426C97FD463F /* NeueHaasDisplayBold.ttf */; };
+		C10F1EC44C5F4AC1BD5CCC7F /* NeueHaasDisplayBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4BB96E7416B46F0BEF76CFF /* NeueHaasDisplayBoldItalic.ttf */; };
+		EB343FDDA8DE4863AEB54010 /* NeueHaasDisplayLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A13376B16204768BD49D8D5 /* NeueHaasDisplayLight.ttf */; };
+		9C9C168B5FA14334A65C2C09 /* NeueHaasDisplayLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 444AE47406DE4DD382AABCF2 /* NeueHaasDisplayLightItalic.ttf */; };
+		88F8DE0B51F54B90B46CF59F /* NeueHaasDisplayMediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 010C144582B14DA58A75B9B1 /* NeueHaasDisplayMediumItalic.ttf */; };
+		5CB31E95F9D74157A81BCB8A /* NeueHaasDisplayRoman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3158B7A782024CC69C9C0254 /* NeueHaasDisplayRoman.ttf */; };
+		EAF7ED0521B54690B9082D24 /* NeueHaasDisplayRomanItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A39B1F7DF43D4AE88E20B548 /* NeueHaasDisplayRomanItalic.ttf */; };
+		6C6CB10F26B845C7A67C3445 /* NeueHaasDisplayMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E0B893C2134348129066C6B7 /* NeueHaasDisplayMedium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,14 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Tria/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Tria-TriaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tria-TriaTests.release.xcconfig"; path = "Target Support Files/Pods-Tria-TriaTests/Pods-Tria-TriaTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		72377F3D81D9426C97FD463F /* NeueHaasDisplayBold.ttf */ = {isa = PBXFileReference; name = "NeueHaasDisplayBold.ttf"; path = "../src/assets/fonts/NeueHaasDisplayBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C4BB96E7416B46F0BEF76CFF /* NeueHaasDisplayBoldItalic.ttf */ = {isa = PBXFileReference; name = "NeueHaasDisplayBoldItalic.ttf"; path = "../src/assets/fonts/NeueHaasDisplayBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2A13376B16204768BD49D8D5 /* NeueHaasDisplayLight.ttf */ = {isa = PBXFileReference; name = "NeueHaasDisplayLight.ttf"; path = "../src/assets/fonts/NeueHaasDisplayLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		444AE47406DE4DD382AABCF2 /* NeueHaasDisplayLightItalic.ttf */ = {isa = PBXFileReference; name = "NeueHaasDisplayLightItalic.ttf"; path = "../src/assets/fonts/NeueHaasDisplayLightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		010C144582B14DA58A75B9B1 /* NeueHaasDisplayMediumItalic.ttf */ = {isa = PBXFileReference; name = "NeueHaasDisplayMediumItalic.ttf"; path = "../src/assets/fonts/NeueHaasDisplayMediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3158B7A782024CC69C9C0254 /* NeueHaasDisplayRoman.ttf */ = {isa = PBXFileReference; name = "NeueHaasDisplayRoman.ttf"; path = "../src/assets/fonts/NeueHaasDisplayRoman.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A39B1F7DF43D4AE88E20B548 /* NeueHaasDisplayRomanItalic.ttf */ = {isa = PBXFileReference; name = "NeueHaasDisplayRomanItalic.ttf"; path = "../src/assets/fonts/NeueHaasDisplayRomanItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E0B893C2134348129066C6B7 /* NeueHaasDisplayMedium.ttf */ = {isa = PBXFileReference; name = "NeueHaasDisplayMedium.ttf"; path = "../src/assets/fonts/NeueHaasDisplayMedium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +138,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				CB1590F5C13846A4B7BA950E /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +164,22 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		CB1590F5C13846A4B7BA950E /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				72377F3D81D9426C97FD463F /* NeueHaasDisplayBold.ttf */,
+				C4BB96E7416B46F0BEF76CFF /* NeueHaasDisplayBoldItalic.ttf */,
+				2A13376B16204768BD49D8D5 /* NeueHaasDisplayLight.ttf */,
+				444AE47406DE4DD382AABCF2 /* NeueHaasDisplayLightItalic.ttf */,
+				010C144582B14DA58A75B9B1 /* NeueHaasDisplayMediumItalic.ttf */,
+				3158B7A782024CC69C9C0254 /* NeueHaasDisplayRoman.ttf */,
+				A39B1F7DF43D4AE88E20B548 /* NeueHaasDisplayRomanItalic.ttf */,
+				E0B893C2134348129066C6B7 /* NeueHaasDisplayMedium.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -243,6 +276,14 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				BBBC74D760CF4F0F845248F2 /* NeueHaasDisplayBold.ttf in Resources */,
+				C10F1EC44C5F4AC1BD5CCC7F /* NeueHaasDisplayBoldItalic.ttf in Resources */,
+				EB343FDDA8DE4863AEB54010 /* NeueHaasDisplayLight.ttf in Resources */,
+				9C9C168B5FA14334A65C2C09 /* NeueHaasDisplayLightItalic.ttf in Resources */,
+				88F8DE0B51F54B90B46CF59F /* NeueHaasDisplayMediumItalic.ttf in Resources */,
+				5CB31E95F9D74157A81BCB8A /* NeueHaasDisplayRoman.ttf in Resources */,
+				EAF7ED0521B54690B9082D24 /* NeueHaasDisplayRomanItalic.ttf in Resources */,
+				6C6CB10F26B845C7A67C3445 /* NeueHaasDisplayMedium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

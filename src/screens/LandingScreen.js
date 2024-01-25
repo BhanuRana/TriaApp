@@ -1,7 +1,7 @@
 import {View, Text, Image, StyleSheet} from 'react-native';
 import React from 'react';
 import {Button, LinkText, GradientText} from '../components';
-import commonStyles from '../styles/styles';
+import commonStyles, {PRIMARY_FONT_REGULAR} from '../styles/styles';
 
 const LandingScreen = ({navigation}) => {
   return (
@@ -62,6 +62,9 @@ const styles = StyleSheet.create({
   },
   tagline: {
     fontSize: 22,
+    fontFamily: PRIMARY_FONT_REGULAR,
+    fontWeight: '500',
+    lineHeight: 26.5,
     textAlign: 'center',
     marginTop: 24,
     marginBottom: 48,

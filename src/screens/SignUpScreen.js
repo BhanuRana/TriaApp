@@ -1,7 +1,7 @@
 import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
 import BackButton from '../components/BackButton';
-import commonStyles from '../styles/styles';
+import commonStyles, {PRIMARY_FONT_MEDIUM} from '../styles/styles';
 import Colors from '../styles/colors';
 
 const SignUpScreen = ({navigation}) => {
@@ -72,7 +72,6 @@ const styles = StyleSheet.create({
     marginTop: 76,
   },
   title: {
-    fontSize: 28,
     marginTop: 20,
     marginBottom: 64,
   },
@@ -98,6 +97,7 @@ const styles = StyleSheet.create({
   signUpTriaBtnText: {
     color: Colors.primaryBtnText,
     fontSize: 18,
+    fontFamily: PRIMARY_FONT_MEDIUM,
     fontWeight: '600',
     lineHeight: 21,
     letterSpacing: 0.36,
@@ -114,6 +114,7 @@ const styles = StyleSheet.create({
   signUpBtnText: {
     color: Colors.primary,
     fontSize: 18,
+    fontFamily: PRIMARY_FONT_MEDIUM,
     fontWeight: '600',
     lineHeight: 21,
     letterSpacing: 0.36,
@@ -131,6 +132,7 @@ const styles = StyleSheet.create({
   signInBtnText: {
     color: Colors.primary,
     fontSize: 18,
+    fontFamily: PRIMARY_FONT_MEDIUM,
     fontWeight: '600',
     lineHeight: 21,
     letterSpacing: 0.36,
