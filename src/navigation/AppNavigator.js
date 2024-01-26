@@ -6,6 +6,7 @@ import LandingScreen from '../screens/LandingScreen';
 import SignUpScreen from '../screens/SignUpScreen';
 import SignUpWithTria from '../screens/SignUpWithTria';
 import TriaLogin from '../screens/TriaLogin';
+import ContinueWithEmail from '../screens/ContinueWithEmail';
 import styles from '../styles/styles';
 
 const Stack = createNativeStackNavigator();
@@ -25,6 +26,10 @@ const AppNavigator = () => {
           <Stack.Screen name="SignUpWithTria" component={SignUpWithTria} />
           <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
           <Stack.Screen name="TriaLogin" component={TriaLogin} />
+          <Stack.Screen
+            name="ContinueWithEmail"
+            component={ContinueWithEmail}
+          />
         </Stack.Navigator>
       </ImageBackground>
     </NavigationContainer>

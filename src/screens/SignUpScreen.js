@@ -38,7 +38,9 @@ const SignUpScreen = ({navigation}) => {
           />
           <Text style={styles.signUpBtnText}>Continue with Apple</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.signUpBtn} onPress={() => {}}>
+        <TouchableOpacity
+          style={styles.signUpBtn}
+          onPress={() => navigation.navigate('ContinueWithEmail')}>
           <Image
             style={styles.signUpSocialIcon}
             source={require('../assets/email.png')}

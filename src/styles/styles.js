@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textLinkBtnText: {
-    color: Colors.interactive,
+    color: Colors.secondary,
     textAlign: 'center',
     fontSize: 15,
     fontFamily: PRIMARY_FONT_REGULAR,
