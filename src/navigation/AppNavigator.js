@@ -9,6 +9,7 @@ import TriaLogin from '../screens/TriaLogin';
 import ContinueWithEmail from '../screens/ContinueWithEmail';
 import SetupSecurity from '../screens/SetupSecurity';
 import AccountCustomisation from '../screens/AccountCustomisation';
+import WelcomeToTria from '../screens/WelcomeToTria';
 import styles from '../styles/styles';
 
 const Stack = createNativeStackNavigator();
@@ -37,6 +38,7 @@ const AppNavigator = () => {
             name="AccountCustomisation"
             component={AccountCustomisation}
           />
+          <Stack.Screen name="WelcomeToTria" component={WelcomeToTria} />
         </Stack.Navigator>
       </ImageBackground>
     </NavigationContainer>

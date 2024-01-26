@@ -26,7 +26,10 @@ const LandingScreen = ({navigation}) => {
           title="Get started"
           onPress={() => navigation.navigate('SignUpScreen')}
         />
-        <LinkText title="Continue as Guest" onPress={() => {}} />
+        <LinkText
+          title="Continue as Guest"
+          onPress={() => navigation.navigate('WelcomeToTria')}
+        />
       </View>
     </View>
   );
