@@ -53,7 +53,9 @@ const SignUpScreen = ({navigation}) => {
           <Text style={styles.signUpBtnText}>Continue with Others</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.signInBtn} onPress={() => {}}>
+        <TouchableOpacity
+          style={styles.signInBtn}
+          onPress={() => navigation.navigate('TriaLogin')}>
           <Text style={styles.signInBtnText}>Log in</Text>
         </TouchableOpacity>
       </View>

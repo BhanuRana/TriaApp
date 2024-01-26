@@ -158,12 +158,9 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     paddingVertical: 16,
-    paddingHorizontal: 24,
-    marginBottom: 32,
   },
   termsHelperText: {
     marginTop: 8,
-    marginBottom: 24,
   },
 });
 

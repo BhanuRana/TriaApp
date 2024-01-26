@@ -117,6 +117,24 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     letterSpacing: 0.72,
   },
+  formTitle: {
+    color: Colors.primary,
+    fontSize: 24,
+    fontFamily: PRIMARY_FONT_REGULAR,
+    lineHeight: 28.8,
+    fontWeight: '500',
+    letterSpacing: 0.48,
+  },
+  inputLabel: {
+    marginTop: 24,
+    color: Colors.secondary,
+    fontSize: 15,
+    fontFamily: PRIMARY_FONT_REGULAR,
+    lineHeight: 18,
+    fontWeight: '400',
+    letterSpacing: 0.6,
+    marginBottom: 12,
+  },
   inputContainer: {
     height: 52,
     paddingHorizontal: 20,
@@ -140,6 +158,8 @@ const styles = StyleSheet.create({
   inputIcon: {},
   nextBtn: {
     width: 200,
+    marginVertical: 24,
+    marginHorizontal: 16,
   },
 });
 

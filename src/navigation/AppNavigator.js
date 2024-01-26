@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import LandingScreen from '../screens/LandingScreen';
 import SignUpScreen from '../screens/SignUpScreen';
 import SignUpWithTria from '../screens/SignUpWithTria';
+import TriaLogin from '../screens/TriaLogin';
 import styles from '../styles/styles';
 
 const Stack = createNativeStackNavigator();
@@ -23,6 +24,7 @@ const AppNavigator = () => {
           <Stack.Screen name="LandingScreen" component={LandingScreen} />
           <Stack.Screen name="SignUpWithTria" component={SignUpWithTria} />
           <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
+          <Stack.Screen name="TriaLogin" component={TriaLogin} />
         </Stack.Navigator>
       </ImageBackground>
     </NavigationContainer>
