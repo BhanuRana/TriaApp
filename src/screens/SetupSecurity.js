@@ -26,7 +26,7 @@ const SetupSecurity = ({navigation}) => {
           <Button
             style={commonStyles.nextBtn}
             title="Allow"
-            onPress={() => {}}
+            onPress={() => navigation.navigate('AccountCustomisation')}
           />
           <LinkText title="Setup later" onPress={() => {}} />
         </View>

@@ -8,6 +8,7 @@ import SignUpWithTria from '../screens/SignUpWithTria';
 import TriaLogin from '../screens/TriaLogin';
 import ContinueWithEmail from '../screens/ContinueWithEmail';
 import SetupSecurity from '../screens/SetupSecurity';
+import AccountCustomisation from '../screens/AccountCustomisation';
 import styles from '../styles/styles';
 
 const Stack = createNativeStackNavigator();
@@ -32,6 +33,10 @@ const AppNavigator = () => {
             component={ContinueWithEmail}
           />
           <Stack.Screen name="SetupSecurity" component={SetupSecurity} />
+          <Stack.Screen
+            name="AccountCustomisation"
+            component={AccountCustomisation}
+          />
         </Stack.Navigator>
       </ImageBackground>
     </NavigationContainer>

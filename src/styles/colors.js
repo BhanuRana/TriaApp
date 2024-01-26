@@ -14,4 +14,5 @@ export default {
   golden: 'rgba(221, 200, 90, 0.90)',
   gold: 'rgba(221, 200, 90, 0.80)',
   blue: '#3D9DE1',
+  black2: '#202020',
 };
