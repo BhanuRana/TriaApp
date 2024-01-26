@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
     minHeight: 'auto',
     justifyContent: 'center',
     alignItems: 'center',
+    alignSelf: 'center',
   },
   textLinkBtnText: {
     color: Colors.secondary,
@@ -160,6 +161,7 @@ const styles = StyleSheet.create({
     width: 200,
     marginVertical: 24,
     marginHorizontal: 16,
+    alignSelf: 'center',
   },
 });
 

@@ -37,7 +37,7 @@ const ContinueWithEmail = ({navigation}) => {
             <Button
               style={commonStyles.nextBtn}
               title="Next"
-              onPress={() => {}}
+              onPress={() => navigation.navigate('SetupSecurity')}
             />
             <LinkText title="Login with Phone" onPress={() => {}} />
           </View>
