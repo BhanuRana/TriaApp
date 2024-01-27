@@ -32,7 +32,7 @@ const SignUpWithTria = ({navigation}) => {
             style={styles.backBtn}
             onPress={() => navigation.goBack()}
           />
-          <XpBtn points={25} onPress={() => {}} />
+          <XpBtn text="125 XP" onPress={() => {}} />
         </View>
         <View style={styles.topContainer}>
           <Text style={commonStyles.screenTitle}>Create Tria name</Text>

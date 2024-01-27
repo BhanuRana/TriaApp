@@ -75,7 +75,7 @@ const WelcomeToTria = ({navigation}) => {
       <Button
         style={commonStyles.nextBtn}
         title="Continue"
-        onPress={() => {}}
+        onPress={() => navigation.navigate('YourTriaIdentity')}
       />
     </View>
   );
