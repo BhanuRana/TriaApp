@@ -5,10 +5,12 @@ import Animated, {
   FadeOut,
   SlideInRight,
   SlideOutLeft,
+  FadeInRight,
+  FadeOutLeft,
 } from 'react-native-reanimated';
 import {Gallery} from 'iconsax-react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import {BackButton, Button, LinkText} from '../components';
+import {BackButton, Button, LinkText, TriaCard} from '../components';
 import commonStyles, {
   PRIMARY_FONT_REGULAR,
   PRIMARY_FONT_MEDIUM,
@@ -38,7 +40,7 @@ const ProfileImagePreview = () => (
 );
 
 const ProfileImageForm = () => (
-  <Animated.View style={styles.formContainer} exiting={SlideOutLeft}>
+  <Animated.View style={styles.formContainer} exiting={FadeOutLeft}>
     <Text style={styles.formTitle}>Change Profile Image</Text>
     <Text style={styles.formDescription}>
       Regenerate avatar, click or upload your picture for the display picture!
@@ -71,8 +73,41 @@ const ProfileImageForm = () => (
   </Animated.View>
 );
 
+const WalletPreview = ({selectedColor}) => (
+  <Animated.View style={styles.walletCard} entering={FadeIn} exiting={FadeOut}>
+    <TriaCard color={selectedColor} variant="form" />
+  </Animated.View>
+);
+
+const WalletColorForm = ({selectedColor, setSelectedColor}) => (
+  <Animated.View
+    style={styles.formContainer}
+    entering={FadeInRight}
+    exiting={SlideOutLeft}>
+    <Text style={styles.formTitle}>Choose wallet colour</Text>
+    <Text style={styles.formDescription}>
+      Choose the color that suits your persona. This color will be used in your
+      card as well as throughout the wallet.
+    </Text>
+    <View style={[styles.formBtnsContainer, {paddingHorizontal: 24}]}>
+      {['#4845d2', '#ffae06', '#ba3d5d', '#52c979'].map(color => (
+        <TouchableOpacity
+          key={color}
+          onPress={() => setSelectedColor(color)}
+          style={[
+            styles.formBtn,
+            {width: 64, height: 64, backgroundColor: color},
+          ]}>
+          {selectedColor === color && <View style={styles.selectedColor} />}
+        </TouchableOpacity>
+      ))}
+    </View>
+  </Animated.View>
+);
+
 const AccountCustomisation = ({navigation}) => {
   const [currentStep, setCurrentStep] = useState(0);
+  const [selectedColor, setSelectedColor] = useState('#52c979');
 
   const handleNext = () => {
     if (currentStep === NUM_OF_STEPS - 1) {
@@ -92,9 +127,16 @@ const AccountCustomisation = ({navigation}) => {
         <View style={styles.backBtn} />
       </View>
       {currentStep === 0 && <ProfileImagePreview />}
+      {currentStep === 1 && <WalletPreview selectedColor={selectedColor} />}
       <Animated.View style={styles.bottomSheet}>
         <View style={styles.bottomSheetHandle} />
         {currentStep === 0 && <ProfileImageForm />}
+        {currentStep === 1 && (
+          <WalletColorForm
+            selectedColor={selectedColor}
+            setSelectedColor={setSelectedColor}
+          />
+        )}
         <View style={styles.formActions}>
           <Button style={styles.nextBtn} title="Next" onPress={handleNext} />
           <LinkText title="Skip for now" onPress={() => {}} />
@@ -183,12 +225,13 @@ const styles = StyleSheet.create({
   formDescription: {
     marginTop: 8,
     color: Colors.secondary,
-    fontSize: 15,
+    fontSize: 14,
     fontFamily: PRIMARY_FONT_REGULAR,
     fontWeight: '500',
     lineHeight: 18,
   },
   formBtnsContainer: {
+    width: '100%',
     marginTop: 30,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -220,6 +263,17 @@ const styles = StyleSheet.create({
     position: 'absolute',
     alignSelf: 'center',
     bottom: 32,
+  },
+  walletCard: {
+    width: '64%',
+    marginTop: 42,
+  },
+  selectedColor: {
+    width: 42,
+    height: 42,
+    borderRadius: 40,
+    borderWidth: 6,
+    borderColor: Colors.primary,
   },
   nextBtn: {
     width: 200,

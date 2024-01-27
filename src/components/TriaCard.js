@@ -4,14 +4,26 @@ import LinearGradient from 'react-native-linear-gradient';
 import {PRIMARY_FONT_REGULAR} from '../styles/styles';
 import Colors from '../styles/colors';
 
+const gradientForColor = (color = '#52c979') => {
+  const colors = {
+    '#52c979': ['#5AA5DC', '#2AC25E', '#2AC25E'],
+    '#ba3d5d': ['#ba3d5d', '#BF226E', '#BF226E'],
+    '#ffae06': ['#ffae06', '#FFC905', '#FFC905'],
+    '#4845d2': ['#4440D2', '#433ecf', '#433ecf'],
+  };
+
+  return colors[color];
+};
+
 const TriaCard = ({
-  gradientColor = ['#5AA5DC', '#2AC25E', '#2AC25E'],
+  color = '#52c979',
   username = 'Guest',
   score = 0,
+  variant = 'main',
 }) => (
   <View>
     <LinearGradient
-      colors={gradientColor}
+      colors={gradientForColor(color)}
       start={{x: 0, y: 0}}
       end={{x: 1, y: 1}}
       style={styles.gradientBox}>
@@ -32,11 +44,29 @@ const TriaCard = ({
         </View>
         <View style={styles.textInfoContainer}>
           <View>
-            <Text style={styles.usernameText}>{username}@tria</Text>
-            <Text style={styles.userScoreText}>{score} XP</Text>
+            <Text
+              style={
+                variant === 'form'
+                  ? styles.usernameTextFormVariant
+                  : styles.usernameText
+              }>
+              {username}@tria
+            </Text>
+            <Text
+              style={
+                variant === 'form'
+                  ? styles.userScoreTextFormVariant
+                  : styles.userScoreText
+              }>
+              {score} XP
+            </Text>
           </View>
           <Image
-            style={styles.triaLogoImg}
+            style={
+              variant === 'form'
+                ? styles.triaLogoImgFormVariant
+                : styles.triaLogoImg
+            }
             source={require('../assets/tria-logo2.png')}
           />
         </View>
@@ -49,7 +79,7 @@ const styles = StyleSheet.create({
   gradientBox: {borderRadius: 18},
   container: {
     width: '100%',
-    aspectRatio: 0.73,
+    aspectRatio: 0.74,
     backgroundColor: 'rgba(255, 255, 255, 0.40)',
     borderRadius: 18,
     padding: 32,
@@ -70,7 +100,7 @@ const styles = StyleSheet.create({
   textInfoContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 24,
+    marginTop: '5%',
     width: '100%',
   },
   usernameText: {
@@ -90,6 +120,23 @@ const styles = StyleSheet.create({
     letterSpacing: 0.44,
   },
   triaLogoImg: {width: 38, height: 44, marginTop: 6},
+  usernameTextFormVariant: {
+    color: Colors.primary,
+    fontFamily: PRIMARY_FONT_REGULAR,
+    fontWeight: '500',
+    fontSize: 24,
+    lineHeight: 36,
+    letterSpacing: 0.51,
+  },
+  userScoreTextFormVariant: {
+    color: Colors.primary,
+    fontFamily: PRIMARY_FONT_REGULAR,
+    fontWeight: '400',
+    fontSize: 17,
+    lineHeight: 25,
+    letterSpacing: 0.35,
+  },
+  triaLogoImgFormVariant: {width: 30, height: 35, marginTop: 6},
 });
 
 export default TriaCard;
