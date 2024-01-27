@@ -2,6 +2,7 @@ export default {
   background: '#101010',
   primary: 'rgba(255, 255, 255, 1)',
   primary80: 'rgba(255, 255, 255, 0.80)',
+  primary60: 'rgba(255, 255, 255, 0.60)',
   secondary: 'rgba(255, 255, 255, 0.40)',
   interactive: 'gray',
   error: 'red',
@@ -15,4 +16,5 @@ export default {
   gold: 'rgba(221, 200, 90, 0.80)',
   blue: '#3D9DE1',
   black2: '#202020',
+  yellow: '#FFBC11',
 };

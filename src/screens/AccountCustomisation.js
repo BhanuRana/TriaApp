@@ -8,7 +8,7 @@ import Animated, {
   FadeInRight,
   FadeOutLeft,
 } from 'react-native-reanimated';
-import {Gallery} from 'iconsax-react-native';
+import {Gallery, Moon, Sun1} from 'iconsax-react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {BackButton, Button, LinkText, TriaCard} from '../components';
 import commonStyles, {
@@ -105,9 +105,81 @@ const WalletColorForm = ({selectedColor, setSelectedColor}) => (
   </Animated.View>
 );
 
+const SelectPlatformThemeForm = ({currentTheme, setCurrentTheme}) => (
+  <Animated.View
+    style={styles.formContainer}
+    entering={FadeInRight}
+    exiting={SlideOutLeft}>
+    <Text style={styles.formTitle}>Choose app theme</Text>
+    <Text style={styles.formDescription}>
+      Choose the color that you prefer using on your mobile device.
+    </Text>
+    <View
+      style={[
+        styles.formBtnsContainer,
+        {justifyContent: 'flex-start', marginTop: 14},
+      ]}>
+      {currentTheme === 'dark' ? (
+        <>
+          <View style={{alignItems: 'center', marginHorizontal: 16}}>
+            <TouchableOpacity
+              style={[
+                styles.formBtn,
+                {width: 52, height: 52, backgroundColor: '#5E52E9'},
+              ]}>
+              <View style={styles.activeThemeHighlighter}>
+                <Moon size="24" color={Colors.secondary} variant="Bold" />
+              </View>
+            </TouchableOpacity>
+            <Text style={styles.activeThemeText}>Dark mode</Text>
+          </View>
+          <View style={{alignItems: 'center', marginHorizontal: 16}}>
+            <TouchableOpacity
+              onPress={() => setCurrentTheme('light')}
+              style={[styles.formBtn, {width: 52, height: 52}]}>
+              <Sun1 size="24" color={Colors.secondary} />
+            </TouchableOpacity>
+            <Text style={styles.inactiveThemeText}>Light mode</Text>
+          </View>
+        </>
+      ) : (
+        <>
+          <View style={{alignItems: 'center', marginHorizontal: 16}}>
+            <TouchableOpacity
+              onPress={() => setCurrentTheme('dark')}
+              style={[styles.formBtn, {width: 52, height: 52}]}>
+              <Moon size="24" color={Colors.secondary} />
+            </TouchableOpacity>
+            <Text style={styles.inactiveThemeText}>Dark mode</Text>
+          </View>
+          <View style={{alignItems: 'center', marginHorizontal: 16}}>
+            <LinearGradient
+              colors={['#FFBC1199', '#FFBC111A', '#FFBC111A']}
+              start={{x: 0, y: 0}}
+              end={{x: 1, y: 0}}
+              style={styles.gradientBorder}>
+              <TouchableOpacity
+                style={[
+                  styles.formBtn,
+                  {width: 52, height: 52, backgroundColor: 'transparent'},
+                ]}>
+                <View style={styles.activeThemeHighlighter}>
+                  <Sun1 size="24" color={Colors.yellow} variant="Bold" />
+                </View>
+              </TouchableOpacity>
+            </LinearGradient>
+            <Text style={styles.activeThemeText}>Light mode</Text>
+          </View>
+        </>
+      )}
+    </View>
+  </Animated.View>
+);
+
 const AccountCustomisation = ({navigation}) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [selectedColor, setSelectedColor] = useState('#52c979');
+  const [currentTheme, setCurrentTheme] = useState('dark');
 
   const handleNext = () => {
     if (currentStep === NUM_OF_STEPS - 1) {
@@ -128,6 +200,12 @@ const AccountCustomisation = ({navigation}) => {
       </View>
       {currentStep === 0 && <ProfileImagePreview />}
       {currentStep === 1 && <WalletPreview selectedColor={selectedColor} />}
+      {currentStep === 2 && (
+        <WalletPreview
+          selectedColor={selectedColor}
+          currentTheme={currentTheme}
+        />
+      )}
       <Animated.View style={styles.bottomSheet}>
         <View style={styles.bottomSheetHandle} />
         {currentStep === 0 && <ProfileImageForm />}
@@ -135,6 +213,12 @@ const AccountCustomisation = ({navigation}) => {
           <WalletColorForm
             selectedColor={selectedColor}
             setSelectedColor={setSelectedColor}
+          />
+        )}
+        {currentStep === 2 && (
+          <SelectPlatformThemeForm
+            currentTheme={currentTheme}
+            setCurrentTheme={setCurrentTheme}
           />
         )}
         <View style={styles.formActions}>
@@ -274,6 +358,30 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     borderWidth: 6,
     borderColor: Colors.primary,
+  },
+  activeThemeText: {
+    marginTop: 4,
+    color: Colors.primary80,
+    fontSize: 14,
+    fontFamily: PRIMARY_FONT_MEDIUM,
+    fontWeight: '600',
+    lineHeight: 18,
+    letterSpacing: 0.6,
+  },
+  inactiveThemeText: {
+    marginTop: 4,
+    color: Colors.secondary,
+    fontSize: 14,
+    fontFamily: PRIMARY_FONT_REGULAR,
+    fontWeight: '500',
+    lineHeight: 18,
+    letterSpacing: 0.6,
+  },
+  activeThemeHighlighter: {
+    padding: 4,
+    borderWidth: 4,
+    borderRadius: 40,
+    borderColor: Colors.primary60,
   },
   nextBtn: {
     width: 200,
