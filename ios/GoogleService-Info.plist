@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>361016922888-pv6ruhfip93g0s62k7g43dgv5q0otb1l.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.361016922888-pv6ruhfip93g0s62k7g43dgv5q0otb1l</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>361016922888-0nsvo8kvo4j9g512eec25biti07h3702.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA0kZ8rOlNUQMaUjP3p-I9nrf79IDmVK0E</string>
+	<key>GCM_SENDER_ID</key>
+	<string>361016922888</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.tria</string>
+	<key>PROJECT_ID</key>
+	<string>promptopia-410911</string>
+	<key>STORAGE_BUCKET</key>
+	<string>promptopia-410911.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:361016922888:ios:d34fbffb137f1d99a292bd</string>
+</dict>
+</plist>

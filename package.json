@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-native-community/blur": "^4.4.0",
     "@react-native-community/masked-view": "^0.1.11",
+    "@react-native-google-signin/google-signin": "^11.0.0",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
     "iconsax-react-native": "^0.0.8",

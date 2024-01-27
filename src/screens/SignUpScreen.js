@@ -1,10 +1,39 @@
 import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import BackButton from '../components/BackButton';
 import commonStyles, {PRIMARY_FONT_MEDIUM} from '../styles/styles';
 import Colors from '../styles/colors';
 
 const SignUpScreen = ({navigation}) => {
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    GoogleSignin.configure({
+      webClientId:
+        '361016922888-9m0jprrg618o4gqj4kb2m4tt4ahijjl0.apps.googleusercontent.com',
+      scopes: ['profile', 'email'],
+    });
+  }, []);
+
+  const handleGoogleLogin = async () => {
+    setLoading(true);
+    try {
+      await GoogleSignin.hasPlayServices();
+      const userInfo = await GoogleSignin.signIn();
+      const {idToken, user} = userInfo;
+
+      if (idToken) {
+        console.log('user: ', user);
+      }
+    } catch (apiError) {
+      console.log('...GoogleSignin failed: ', apiError);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <View style={styles.container}>
       <BackButton onPress={() => navigation.goBack()} />
@@ -24,7 +53,7 @@ const SignUpScreen = ({navigation}) => {
           onPress={() => navigation.navigate('SignUpWithTria')}>
           <Text style={styles.signUpTriaBtnText}>Sign up with Tria</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.signUpBtn} onPress={() => {}}>
+        <TouchableOpacity style={styles.signUpBtn} onPress={handleGoogleLogin}>
           <Image
             style={styles.signUpSocialIcon}
             source={require('../assets/google.png')}

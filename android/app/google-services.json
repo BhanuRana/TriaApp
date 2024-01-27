@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "361016922888",
+    "project_id": "promptopia-410911",
+    "storage_bucket": "promptopia-410911.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361016922888:android:3cc686873618381ba292bd",
+        "android_client_info": {
+          "package_name": "com.tria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "361016922888-0nsvo8kvo4j9g512eec25biti07h3702.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tria",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "361016922888-9m0jprrg618o4gqj4kb2m4tt4ahijjl0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCf9pZ5_nFaHorxWlKLN62PzwAAHzfw6eY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "361016922888-9m0jprrg618o4gqj4kb2m4tt4ahijjl0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "361016922888-pv6ruhfip93g0s62k7g43dgv5q0otb1l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tria"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
