@@ -1,6 +1,6 @@
 import {View, StyleSheet} from 'react-native';
 import React, {useContext} from 'react';
-import Animated, {FadeInUp, FadeIn} from 'react-native-reanimated';
+import Animated, {FadeInUp, FadeIn, FadeInDown} from 'react-native-reanimated';
 import UserContext from '../context/UserContext';
 import {Button, LinkText, GradientText} from '../components';
 import commonStyles, {PRIMARY_FONT_REGULAR} from '../styles/styles';
@@ -31,7 +31,7 @@ const LandingScreen = ({navigation}) => {
             style={styles.tagline}>{`One name,\nall things Web3`}</GradientText>
         </Animated.View>
         <Animated.View
-          entering={FadeIn.duration(1600)}
+          entering={FadeIn.delay(200).duration(1600)}
           style={styles.btnContainer}>
           <Button
             style={styles.getStartedBtn}
@@ -39,7 +39,7 @@ const LandingScreen = ({navigation}) => {
             onPress={() => navigation.navigate('SignUpScreen')}
           />
         </Animated.View>
-        <Animated.View entering={FadeIn.duration(1600)}>
+        <Animated.View entering={FadeInDown.delay(200).duration(1600)}>
           <LinkText
             title="Continue as Guest"
             onPress={() => {

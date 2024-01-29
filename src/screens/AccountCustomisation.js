@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
 import Animated, {
   FadeIn,
@@ -10,6 +10,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import {Gallery, Moon, Sun1} from 'iconsax-react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import UserContext from '../context/UserContext';
 import {BackButton, Button, LinkText, TriaCard} from '../components';
 import commonStyles, {
   PRIMARY_FONT_REGULAR,
@@ -177,13 +178,14 @@ const SelectPlatformThemeForm = ({currentTheme, setCurrentTheme}) => (
 );
 
 const AccountCustomisation = ({navigation}) => {
+  const {setCurrentUser} = useContext(UserContext);
   const [currentStep, setCurrentStep] = useState(0);
   const [selectedColor, setSelectedColor] = useState('#52c979');
   const [currentTheme, setCurrentTheme] = useState('dark');
 
   const handleNext = () => {
     if (currentStep === NUM_OF_STEPS - 1) {
-      // navigation.navigate('WelcomeToTria');
+      setCurrentUser({name: 'Guest'});
     }
     setCurrentStep(step => (step < 3 ? step + 1 : 3));
   };

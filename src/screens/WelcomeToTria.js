@@ -4,6 +4,7 @@ import Animated, {
   FadeInUp,
   ZoomIn,
   BounceInRight,
+  FadeIn,
 } from 'react-native-reanimated';
 import UserContext from '../context/UserContext';
 import {BackButton, Button, LinkText} from '../components';
@@ -99,7 +100,9 @@ const WelcomeToTria = ({navigation}) => {
           onPress={() => navigation.navigate('YourTriaIdentity')}
         />
       </Animated.View>
-      <Animated.View style={{position: 'absolute', bottom: 10}}>
+      <Animated.View
+        entering={FadeIn.delay(1200).duration(1800)}
+        style={{position: 'absolute', bottom: 10}}>
         {currentUser ? (
           <LinkText title="Sign out" onPress={handleSignOut} />
         ) : null}

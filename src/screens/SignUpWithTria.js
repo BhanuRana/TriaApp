@@ -50,8 +50,8 @@ const SignUpWithTria = ({navigation}) => {
               <TextInput
                 style={commonStyles.input}
                 value={username}
-                placeholder="cathy"
-                placeholderTextColor={Colors.primary80}
+                placeholder="yourname"
+                placeholderTextColor={Colors.primary60}
                 onChangeText={text => setUsername(text)}
                 underlineColorAndroid="transparent"
               />
@@ -77,7 +77,9 @@ const SignUpWithTria = ({navigation}) => {
             <Button
               style={commonStyles.nextBtn}
               title="Next"
-              onPress={() => {}}
+              onPress={() => {
+                navigation.navigate('SetupSecurity');
+              }}
             />
           </View>
         </View>
