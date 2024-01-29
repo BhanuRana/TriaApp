@@ -1,10 +1,12 @@
 import {View, StyleSheet} from 'react-native';
-import React from 'react';
+import React, {useContext} from 'react';
 import Animated, {FadeInUp, FadeIn} from 'react-native-reanimated';
+import UserContext from '../context/UserContext';
 import {Button, LinkText, GradientText} from '../components';
 import commonStyles, {PRIMARY_FONT_REGULAR} from '../styles/styles';
 
 const LandingScreen = ({navigation}) => {
+  const {setCurrentUser} = useContext(UserContext);
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
@@ -40,7 +42,9 @@ const LandingScreen = ({navigation}) => {
         <Animated.View entering={FadeIn.duration(1600)}>
           <LinkText
             title="Continue as Guest"
-            onPress={() => navigation.navigate('WelcomeToTria')}
+            onPress={() => {
+              setCurrentUser({name: 'Guest'});
+            }}
           />
         </Animated.View>
       </View>

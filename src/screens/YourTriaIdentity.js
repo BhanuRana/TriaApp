@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {View, Text, ScrollView, StyleSheet} from 'react-native';
 import Animated, {FadeInUp} from 'react-native-reanimated';
+import UserContext from '../context/UserContext';
 import {BackButton, XpBtn, LinkText, TriaCard} from '../components';
 import commonStyles from '../styles/styles';
 
 const YourTriaIdentity = ({navigation}) => {
+  const {currentUser} = useContext(UserContext);
   return (
     <ScrollView contentContainerStyle={styles.scrollContainer}>
       <BackButton onPress={() => navigation.goBack()} />
@@ -18,7 +20,10 @@ const YourTriaIdentity = ({navigation}) => {
         </View>
         <View style={styles.cardContainer}>
           <Animated.View entering={FadeInUp.delay(200).duration(1100)}>
-            <TriaCard username="Cathy" score={150} />
+            <TriaCard
+              username={currentUser?.givenName || 'Guest'}
+              score={150}
+            />
           </Animated.View>
           <XpBtn
             text="Gift & get 125XP"

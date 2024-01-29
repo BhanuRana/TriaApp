@@ -183,7 +183,7 @@ const AccountCustomisation = ({navigation}) => {
 
   const handleNext = () => {
     if (currentStep === NUM_OF_STEPS - 1) {
-      navigation.navigate('WelcomeToTria');
+      // navigation.navigate('WelcomeToTria');
     }
     setCurrentStep(step => (step < 3 ? step + 1 : 3));
   };

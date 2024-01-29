@@ -1,18 +1,22 @@
-import React from 'react';
-import {View, Text, Image, ScrollView, StyleSheet} from 'react-native';
+import React, {useContext} from 'react';
+import {View, Text, Image, StyleSheet} from 'react-native';
 import Animated, {
   FadeInUp,
   ZoomIn,
   BounceInRight,
 } from 'react-native-reanimated';
-import {BackButton, Button} from '../components';
+import UserContext from '../context/UserContext';
+import {BackButton, Button, LinkText} from '../components';
 import commonStyles, {PRIMARY_FONT_REGULAR} from '../styles/styles';
 import Colors from '../styles/colors';
 
 const WelcomeToTria = ({navigation}) => {
+  const {currentUser, handleSignOut} = useContext(UserContext);
   return (
     <View style={styles.container}>
-      <BackButton onPress={() => navigation.goBack()} />
+      {navigation.canGoBack() ? (
+        <BackButton onPress={() => navigation.goBack()} />
+      ) : null}
       <Image
         style={styles.ellipse1}
         source={require('../assets/ellipse-1.png')}
@@ -94,6 +98,11 @@ const WelcomeToTria = ({navigation}) => {
           title="Continue"
           onPress={() => navigation.navigate('YourTriaIdentity')}
         />
+      </Animated.View>
+      <Animated.View style={{position: 'absolute', bottom: 10}}>
+        {currentUser ? (
+          <LinkText title="Sign out" onPress={handleSignOut} />
+        ) : null}
       </Animated.View>
     </View>
   );

@@ -1,12 +1,20 @@
-import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
-import React, {useState, useEffect} from 'react';
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+  ActivityIndicator,
+} from 'react-native';
+import React, {useState, useEffect, useContext} from 'react';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import UserContext from '../context/UserContext';
 import BackButton from '../components/BackButton';
 import commonStyles, {PRIMARY_FONT_MEDIUM} from '../styles/styles';
 import Colors from '../styles/colors';
 
 const SignUpScreen = ({navigation}) => {
-  const [error, setError] = useState('');
+  const {setCurrentUser} = useContext(UserContext);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -25,7 +33,7 @@ const SignUpScreen = ({navigation}) => {
       const {idToken, user} = userInfo;
 
       if (idToken) {
-        console.log('user: ', user);
+        setCurrentUser(user);
       }
     } catch (apiError) {
       console.log('...GoogleSignin failed: ', apiError);
@@ -54,10 +62,17 @@ const SignUpScreen = ({navigation}) => {
           <Text style={styles.signUpTriaBtnText}>Sign up with Tria</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.signUpBtn} onPress={handleGoogleLogin}>
-          <Image
-            style={styles.signUpSocialIcon}
-            source={require('../assets/google.png')}
-          />
+          {loading ? (
+            <ActivityIndicator
+              color={Colors.success}
+              style={styles.signUpSocialIcon}
+            />
+          ) : (
+            <Image
+              style={styles.signUpSocialIcon}
+              source={require('../assets/google.png')}
+            />
+          )}
           <Text style={styles.signUpBtnText}>Continue with Google</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.signUpBtn} onPress={() => {}}>
