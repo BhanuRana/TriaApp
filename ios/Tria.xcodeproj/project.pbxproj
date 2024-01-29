@@ -14,6 +14,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		5CB31E95F9D74157A81BCB8A /* NeueHaasDisplayRoman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3158B7A782024CC69C9C0254 /* NeueHaasDisplayRoman.ttf */; };
 		6C6CB10F26B845C7A67C3445 /* NeueHaasDisplayMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E0B893C2134348129066C6B7 /* NeueHaasDisplayMedium.ttf */; };
+		6C70E1CD2B679E3E005CA34D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C70E1CC2B679E3D005CA34D /* GoogleService-Info.plist */; };
 		7699B88040F8A987B510C191 /* libPods-Tria-TriaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Tria-TriaTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		88F8DE0B51F54B90B46CF59F /* NeueHaasDisplayMediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 010C144582B14DA58A75B9B1 /* NeueHaasDisplayMediumItalic.ttf */; };
@@ -38,7 +39,7 @@
 		00E356EE1AD99517003FC87E /* TriaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TriaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* TriaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TriaTests.m; sourceTree = "<group>"; };
-		010C144582B14DA58A75B9B1 /* NeueHaasDisplayMediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = NeueHaasDisplayMediumItalic.ttf; path = ../src/assets/fonts/NeueHaasDisplayMediumItalic.ttf; sourceTree = "<group>"; };
+		010C144582B14DA58A75B9B1 /* NeueHaasDisplayMediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = NeueHaasDisplayMediumItalic.ttf; path = ../src/assets/fonts/NeueHaasDisplayMediumItalic.ttf; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Tria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Tria/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Tria/AppDelegate.mm; sourceTree = "<group>"; };
@@ -46,19 +47,20 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tria/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Tria/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-Tria-TriaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tria-TriaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A13376B16204768BD49D8D5 /* NeueHaasDisplayLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = NeueHaasDisplayLight.ttf; path = ../src/assets/fonts/NeueHaasDisplayLight.ttf; sourceTree = "<group>"; };
-		3158B7A782024CC69C9C0254 /* NeueHaasDisplayRoman.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = NeueHaasDisplayRoman.ttf; path = ../src/assets/fonts/NeueHaasDisplayRoman.ttf; sourceTree = "<group>"; };
+		2A13376B16204768BD49D8D5 /* NeueHaasDisplayLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = NeueHaasDisplayLight.ttf; path = ../src/assets/fonts/NeueHaasDisplayLight.ttf; sourceTree = "<group>"; };
+		3158B7A782024CC69C9C0254 /* NeueHaasDisplayRoman.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = NeueHaasDisplayRoman.ttf; path = ../src/assets/fonts/NeueHaasDisplayRoman.ttf; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-Tria.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tria.debug.xcconfig"; path = "Target Support Files/Pods-Tria/Pods-Tria.debug.xcconfig"; sourceTree = "<group>"; };
-		444AE47406DE4DD382AABCF2 /* NeueHaasDisplayLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = NeueHaasDisplayLightItalic.ttf; path = ../src/assets/fonts/NeueHaasDisplayLightItalic.ttf; sourceTree = "<group>"; };
+		444AE47406DE4DD382AABCF2 /* NeueHaasDisplayLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = NeueHaasDisplayLightItalic.ttf; path = ../src/assets/fonts/NeueHaasDisplayLightItalic.ttf; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-Tria.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tria.release.xcconfig"; path = "Target Support Files/Pods-Tria/Pods-Tria.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-Tria-TriaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tria-TriaTests.debug.xcconfig"; path = "Target Support Files/Pods-Tria-TriaTests/Pods-Tria-TriaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-Tria.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tria.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		72377F3D81D9426C97FD463F /* NeueHaasDisplayBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = NeueHaasDisplayBold.ttf; path = ../src/assets/fonts/NeueHaasDisplayBold.ttf; sourceTree = "<group>"; };
+		6C70E1CC2B679E3D005CA34D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Tria/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		72377F3D81D9426C97FD463F /* NeueHaasDisplayBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = NeueHaasDisplayBold.ttf; path = ../src/assets/fonts/NeueHaasDisplayBold.ttf; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Tria/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Tria-TriaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tria-TriaTests.release.xcconfig"; path = "Target Support Files/Pods-Tria-TriaTests/Pods-Tria-TriaTests.release.xcconfig"; sourceTree = "<group>"; };
-		A39B1F7DF43D4AE88E20B548 /* NeueHaasDisplayRomanItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = NeueHaasDisplayRomanItalic.ttf; path = ../src/assets/fonts/NeueHaasDisplayRomanItalic.ttf; sourceTree = "<group>"; };
-		C4BB96E7416B46F0BEF76CFF /* NeueHaasDisplayBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = NeueHaasDisplayBoldItalic.ttf; path = ../src/assets/fonts/NeueHaasDisplayBoldItalic.ttf; sourceTree = "<group>"; };
-		E0B893C2134348129066C6B7 /* NeueHaasDisplayMedium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = NeueHaasDisplayMedium.ttf; path = ../src/assets/fonts/NeueHaasDisplayMedium.ttf; sourceTree = "<group>"; };
+		A39B1F7DF43D4AE88E20B548 /* NeueHaasDisplayRomanItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = NeueHaasDisplayRomanItalic.ttf; path = ../src/assets/fonts/NeueHaasDisplayRomanItalic.ttf; sourceTree = "<group>"; };
+		C4BB96E7416B46F0BEF76CFF /* NeueHaasDisplayBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = NeueHaasDisplayBoldItalic.ttf; path = ../src/assets/fonts/NeueHaasDisplayBoldItalic.ttf; sourceTree = "<group>"; };
+		E0B893C2134348129066C6B7 /* NeueHaasDisplayMedium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = NeueHaasDisplayMedium.ttf; path = ../src/assets/fonts/NeueHaasDisplayMedium.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 		13B07FAE1A68108700A75B9A /* Tria */ = {
 			isa = PBXGroup;
 			children = (
+				6C70E1CC2B679E3D005CA34D /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -178,7 +181,6 @@
 				E0B893C2134348129066C6B7 /* NeueHaasDisplayMedium.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +284,7 @@
 				9C9C168B5FA14334A65C2C09 /* NeueHaasDisplayLightItalic.ttf in Resources */,
 				88F8DE0B51F54B90B46CF59F /* NeueHaasDisplayMediumItalic.ttf in Resources */,
 				5CB31E95F9D74157A81BCB8A /* NeueHaasDisplayRoman.ttf in Resources */,
+				6C70E1CD2B679E3E005CA34D /* GoogleService-Info.plist in Resources */,
 				EAF7ED0521B54690B9082D24 /* NeueHaasDisplayRomanItalic.ttf in Resources */,
 				6C6CB10F26B845C7A67C3445 /* NeueHaasDisplayMedium.ttf in Resources */,
 			);
@@ -621,10 +624,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -692,10 +692,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

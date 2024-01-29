@@ -1,5 +1,6 @@
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import React from 'react';
+import Animated, {FadeInUp, FadeIn} from 'react-native-reanimated';
 import {Button, LinkText, GradientText} from '../components';
 import commonStyles, {PRIMARY_FONT_REGULAR} from '../styles/styles';
 
@@ -7,29 +8,41 @@ const LandingScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
-        <Text style={commonStyles.font16}>Experience omni-presence</Text>
-        <Image
+        <Animated.Text style={commonStyles.font16}>
+          Experience omni-presence
+        </Animated.Text>
+        <Animated.Image
+          entering={FadeInUp.duration(1100)}
           style={styles.triaForAllImage}
           source={require('../assets/tria-for-all.png')}
         />
       </View>
       <View style={styles.actionBtns}>
-        <Image
+        <Animated.Image
+          entering={FadeInUp.duration(1400)}
           style={styles.triaTextImage}
           source={require('../assets/tria-text.png')}
         />
-        <GradientText
-          colors={['rgba(250, 250, 250, 0.90)', 'rgba(250, 250, 250, 0.40)']}
-          style={styles.tagline}>{`One name,\nall things Web3`}</GradientText>
-        <Button
-          style={styles.getStartedBtn}
-          title="Get started"
-          onPress={() => navigation.navigate('SignUpScreen')}
-        />
-        <LinkText
-          title="Continue as Guest"
-          onPress={() => navigation.navigate('WelcomeToTria')}
-        />
+        <Animated.View entering={FadeInUp.duration(1400)}>
+          <GradientText
+            colors={['rgba(250, 250, 250, 0.90)', 'rgba(250, 250, 250, 0.40)']}
+            style={styles.tagline}>{`One name,\nall things Web3`}</GradientText>
+        </Animated.View>
+        <Animated.View
+          entering={FadeIn.duration(1600)}
+          style={styles.btnContainer}>
+          <Button
+            style={styles.getStartedBtn}
+            title="Get started"
+            onPress={() => navigation.navigate('SignUpScreen')}
+          />
+        </Animated.View>
+        <Animated.View entering={FadeIn.duration(1600)}>
+          <LinkText
+            title="Continue as Guest"
+            onPress={() => navigation.navigate('WelcomeToTria')}
+          />
+        </Animated.View>
       </View>
     </View>
   );
@@ -71,6 +84,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 24,
     marginBottom: 48,
+  },
+  btnContainer: {
+    width: '100%',
   },
   getStartedBtn: {
     marginBottom: 24,

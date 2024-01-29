@@ -1,6 +1,11 @@
 import React from 'react';
 import {View, Text, Image, ScrollView, StyleSheet} from 'react-native';
-import {BackButton, Button, LinkText} from '../components';
+import Animated, {
+  FadeInUp,
+  ZoomIn,
+  BounceInRight,
+} from 'react-native-reanimated';
+import {BackButton, Button} from '../components';
 import commonStyles, {PRIMARY_FONT_REGULAR} from '../styles/styles';
 import Colors from '../styles/colors';
 
@@ -16,18 +21,23 @@ const WelcomeToTria = ({navigation}) => {
         style={styles.ellipse2}
         source={require('../assets/ellipse-2.png')}
       />
-      <View style={styles.topContainer}>
+      <Animated.View
+        style={styles.topContainer}
+        entering={FadeInUp.delay(200).duration(1500)}>
         <Text style={commonStyles.screenTitle}>Welcome to Tria</Text>
         <Text style={commonStyles.screenDescription}>
           One name all things web3
         </Text>
-      </View>
-      <Image
+      </Animated.View>
+      <Animated.Image
+        entering={ZoomIn.delay(300).duration(700)}
         style={styles.trialogo}
         source={require('../assets/tria-logo.png')}
       />
       <View style={styles.pointsContainer}>
-        <View style={styles.point}>
+        <Animated.View
+          style={styles.point}
+          entering={FadeInUp.delay(200).duration(1500)}>
           <Image
             style={styles.pointImg}
             source={require('../assets/point-1-icon.png')}
@@ -38,8 +48,10 @@ const WelcomeToTria = ({navigation}) => {
               Explore, learn, invest and win big!
             </Text>
           </Text>
-        </View>
-        <View style={styles.point}>
+        </Animated.View>
+        <Animated.View
+          style={styles.point}
+          entering={FadeInUp.delay(200).duration(1500)}>
           <Image
             style={styles.pointImg}
             source={require('../assets/point-2-icon.png')}
@@ -48,8 +60,10 @@ const WelcomeToTria = ({navigation}) => {
             <Text style={styles.pointTextHighlight}>Quick as a wink:</Text> buy,
             send, receive speedily; switch up your money game!
           </Text>
-        </View>
-        <View style={styles.point}>
+        </Animated.View>
+        <Animated.View
+          style={styles.point}
+          entering={FadeInUp.delay(200).duration(1500)}>
           <Image
             style={styles.pointImg}
             source={require('../assets/point-3-icon.png')}
@@ -60,8 +74,10 @@ const WelcomeToTria = ({navigation}) => {
               protected by top tier security.
             </Text>
           </Text>
-        </View>
-        <View style={styles.point}>
+        </Animated.View>
+        <Animated.View
+          style={styles.point}
+          entering={FadeInUp.delay(200).duration(1500)}>
           <Image
             style={styles.pointImg}
             source={require('../assets/point-4-icon.png')}
@@ -70,13 +86,15 @@ const WelcomeToTria = ({navigation}) => {
             Convenience of securely managing your{' '}
             <Text style={styles.pointTextHighlight}>assets in one place.</Text>
           </Text>
-        </View>
+        </Animated.View>
       </View>
-      <Button
-        style={commonStyles.nextBtn}
-        title="Continue"
-        onPress={() => navigation.navigate('YourTriaIdentity')}
-      />
+      <Animated.View entering={BounceInRight.delay(1000).duration(900)}>
+        <Button
+          style={commonStyles.nextBtn}
+          title="Continue"
+          onPress={() => navigation.navigate('YourTriaIdentity')}
+        />
+      </Animated.View>
     </View>
   );
 };

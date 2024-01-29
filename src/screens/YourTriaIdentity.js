@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, ScrollView, StyleSheet} from 'react-native';
+import Animated, {FadeInUp} from 'react-native-reanimated';
 import {BackButton, XpBtn, LinkText, TriaCard} from '../components';
 import commonStyles from '../styles/styles';
 
@@ -16,7 +17,9 @@ const YourTriaIdentity = ({navigation}) => {
           </Text>
         </View>
         <View style={styles.cardContainer}>
-          <TriaCard username="Cathy" score={150} />
+          <Animated.View entering={FadeInUp.delay(200).duration(1100)}>
+            <TriaCard username="Cathy" score={150} />
+          </Animated.View>
           <XpBtn
             text="Gift & get 125XP"
             style={styles.xpBtn}
